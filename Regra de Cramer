@@ -7,7 +7,6 @@ programa
 		para(inteiro j = 0; j < 3; j++)
 			total += mat[0][j % 3] * mat[1][(j+1) % 3] * mat[2][(j+2) % 3]
 		
-
 		//Calculo da diagonal secundaria
 		para(inteiro j=0; j<3 ; j++){
 			total -= mat[2][j % 3] * mat[1][(j+1) % 3] * mat[0][(j+2) % 3]
@@ -21,12 +20,11 @@ programa
 		para( inteiro i = 0; i < 3; i++){
 			matAux[i][0]=k[i]
 		}
-				inteiro total = 0
+		inteiro total = 0
 
 		// Calculo da diagonal principal
 		para(inteiro j = 0; j < 3; j++)
 			total += matAux[0][j % 3] * matAux[1][(j+1) % 3] * matAux[2][(j+2) % 3]
-		
 
 		//Calculo da diagonal secundaria
 		para(inteiro j=0; j<3 ; j++){
@@ -36,20 +34,17 @@ programa
 		//Retorna o valor do Determinante
 		retorne total
 	}
-
-	
 	funcao inteiro dy(inteiro matAux[][], inteiro k[]){	//Calcula Determinante Dy
 		
 		para( inteiro i = 0; i < 3; i++){
 			matAux[i][1]=k[i]
 		}
-				inteiro total = 0
+		inteiro total = 0
 
 		// Calculo da diagonal principal
 		para(inteiro j = 0; j < 3; j++)
 			total += matAux[0][j % 3] * matAux[1][(j+1) % 3] * matAux[2][(j+2) % 3]
 		
-
 		//Calculo da diagonal secundaria
 		para(inteiro j=0; j<3 ; j++){
 			total -= matAux[2][j % 3] * matAux[1][(j+1) % 3] * matAux[0][(j+2) % 3]
@@ -58,20 +53,17 @@ programa
 		//Retorna o valor do Determinante
 		retorne total
 	}
-
-	
 	funcao inteiro dz(inteiro matAux[][], inteiro k[]){	//Calcula Determinante Dz
 		
 		para( inteiro i = 0; i < 3; i++){
 			matAux[i][2]=k[i]
 		}
-				inteiro total = 0
+		inteiro total = 0
 
 		// Calculo da diagonal principal
 		para(inteiro j = 0; j < 3; j++)
 			total += matAux[0][j % 3] * matAux[1][(j+1) % 3] * matAux[2][(j+2) % 3]
 		
-
 		//Calculo da diagonal secundaria
 		para(inteiro j=0; j<3 ; j++){
 			total -= matAux[2][j % 3] * matAux[1][(j+1) % 3] * matAux[0][(j+2) % 3]
@@ -80,8 +72,6 @@ programa
 		//Retorna o valor do Determinante
 		retorne total
 	}
-
-	
 	funcao imprimeMatriz(inteiro mat[][]) {				//Imprime uma Matriz
 		para(inteiro i = 0; i< 3; i++){
 			escreva("[")
@@ -91,16 +81,14 @@ programa
 			escreva("]\n")
 		}
 	}
-	
 	funcao inicio()
 	{
 		inteiro mat[3][3], aux[3][3]
 		inteiro b[3]
-		inteiro x, y, z
+		inteiro x, y, z, i, j
 		cadeia v[3] = {"x", "y", "z"}
-		inteiro i, j
 
-		escreva("qualquer coisasduhasdush\n\n")
+		escreva("Vamos resolver um sistema linear pela Regra de Cramer\n\n")
 		
 		//Declaração das variaveis da Matriz
 		para(i = 0; i < 3; i= i+1){
@@ -165,6 +153,7 @@ programa
 				aux[i][j]=mat[i][j]
 			}
 		}
+		
 		z = dz(aux, b)				//Chama função para calcular Dz
 		imprimeMatriz(aux)
 		escreva("\nDeterminante Dz: ",z,"\n\n")
