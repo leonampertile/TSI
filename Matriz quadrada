@@ -1,0 +1,50 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		inteiro a[2][2], b[2][2], c[2][2], i, j, k	//Declaração de variaveis
+
+		para( i = 0; i < 2; i++){		//Matriz A
+			para( j = 0; j < 2; j++){
+				escreva("Digite o valor para o elemento A na linha ",i+1," coluna ",j+1,": ")
+				leia(a[i][j])
+			}
+		}
+		escreva("\n\n")
+
+		para( i = 0; i < 2; i++){		//Matriz B
+			para( j = 0; j < 2; j++){
+				escreva("Digite o valor para o elemento B na linha ",i+1," coluna ",j+1,": ")
+				leia(b[i][j])
+			}
+		}
+		escreva("\n\n")
+		
+		para( i = 0; i < 2; i++){	//Calculo Matriz C
+			para( j = 0; j < 2; j++){
+				escreva("\nMultiplicamos os elementos da linha ",i+1," com a coluna ",j+1," ")
+				escreva("\n calculando o elemento c",i+1,j+1,": ")
+				para( k = 0; k < 2; k++){
+					c[i][j] = c[i][j] + a[i][k]*b[k][j]
+					se( k < 1 ){
+						escreva("(",a[i][k]," x ",b[k][j],")"," + ")
+					}senao{
+						escreva("(",a[i][k]," x ",b[k][j],")")
+					}
+				}
+				escreva(" = ",c[i][j])
+			}
+		}
+		
+		escreva("\n\nAssim, C = \n\n")	//Imprime a Matriz resultante
+		
+		para( i = 0; i < 2; i++){
+			escreva("[")
+			para( j = 0; j < 2; j++){
+				escreva(" ",c[i][j]," ")
+			}
+			escreva("]\n")
+		}	
+	}
+}
