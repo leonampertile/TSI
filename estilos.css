@@ -1,0 +1,325 @@
+@font-face{
+    font-family: "Helvetica Monospaced";
+    src: url(../fonts/Helvetica\ Monospaced.ttf)
+}
+body{
+    background-color: rgb(38,50,56);
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    font-family: "Helvetica Monospaced";
+}
+img {
+    max-width:100%;
+}
+.amarelo{
+    color: rgb(255, 194, 0);
+}
+.vermelho{
+    color: red;
+}
+.azul{
+    color: rgb(65, 189, 255);
+}
+.negrito{
+    font-weight: bold;
+}
+.btn{
+    text-align: center;
+    margin-top: 10px;
+    display: table;
+    margin: 10px auto;
+}
+.efeito{
+    border: none;
+    color: black;
+    font-size: 80%;
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 5px;
+    cursor: pointer;
+}
+.click{
+    background: rgb(255, 194, 0);
+    box-shadow: 0 5px 0 rgb(122, 122, 1);
+}
+.click:hover{
+    background: rgb(122, 122, 1);
+    box-shadow: 0 5px 0 rgb(61, 61, 0);
+}
+.click:active{
+    box-shadow: none;
+    position: relative;
+    top: 5px;
+}
+.top{
+    width: 100%;
+    background-color: rgb(18, 30, 36);
+    position: fixed;
+    border-bottom: 4px solid;
+    border-color: rgb(255, 194, 0);
+}
+.logo{
+    width: 43%;
+    display: table-cell;
+    padding: 5px;
+    text-align: right;
+    vertical-align: middle;
+}
+.menu a{
+    text-decoration: none;
+    color: white;
+}
+a{
+    text-decoration: none;
+}
+.menu{
+    width: 100%;
+    display: table-cell;
+    position: relative;
+    vertical-align: middle;  
+}
+.menu ul li{
+    display: inline-block;
+    text-align: center;
+    font-size: 105%;
+    font-weight: bold;
+    margin: 5px 20px;
+}
+menu li{
+    display: inline-block; 
+}
+.menu ul{
+    list-style-type: none;
+}
+
+.menu a:hover{
+    color: rgb(200, 200, 200);
+}
+.opcoes{
+    width: 130px;
+    height: auto;
+    background-color: rgb(58, 70, 76);
+    display: table-cell;
+}
+.conteudo{
+    padding: 100px 30px 20px 30px;
+    height: auto;
+    display: table-cell;
+    text-align: center;
+}
+.cramer{
+    width: 90%;
+    height: 200px;
+    background-color: rgb(58, 70, 76);
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;
+    display: table;
+    box-shadow:3px 2px 1px 0px rgba(50, 50, 50, 0.43);
+}
+.descricao{
+    display: table;
+    width: 100%;
+}
+.texto{
+    font-size: 115%;
+    display: table-cell;
+    width: 50%;
+    padding: 15px;
+    vertical-align: middle;
+}
+.img{
+    width: 50%;
+    display: table-cell;
+    padding: 15px;
+    vertical-align: middle;
+}
+.sistema{
+    max-width: 95%;
+    display: table;
+    text-align: center;
+    margin: 15px auto;
+}
+.menor{
+    width: 35%;
+}
+.multiplicacao{
+    width: 90%;
+    height: auto;
+    background-color: rgb(58, 70, 76);
+    margin: auto;
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    box-shadow:3px 2px 1px 0px rgba(50, 50, 50, 0.43);
+}
+.multi{
+    font-size: 120%;
+    display: inline-block;
+    background-color: rgb(38, 50, 56);
+    width: 30%;
+    height: auto;   
+    margin: auto;
+    padding: 10px;
+    vertical-align: middle;
+    text-align: center;
+    box-shadow:3px 2px 1px 0px rgba(50, 50, 50, 0.43);
+}
+.download{
+    width: 70px;
+    margin-top: 110px;
+    position: fixed;
+    text-align: center;
+    padding-left: 20px;
+}
+.link{
+    width: 70px;
+    margin-top: 230px;
+    position: fixed;
+    text-align: center;
+    padding-left: 20px;
+}
+.destaque{
+    background-color: rgb(58, 70, 76, 0.4);
+    padding: 5px;
+}
+.rodape{
+    background-color: rgb(18, 30, 36);
+    display: table;
+    text-align: center;
+}
+.logorodape{
+    display: table-cell;
+    margin: 10px;
+    vertical-align: middle;
+    width: 150px;
+}
+.sobre{
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 80%;
+}
+.feitopor{
+    width: 300px;
+    border-left: 2px solid;
+    border-color: black;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 70%;
+}
+.eu{
+    width: 15%;
+    margin: 10px auto;
+}
+.opcoes2, .link2, .download2, .mobile, .screen{
+    display: none;
+}
+
+@media only screen and (max-width:599px){
+    .top{
+        position: static;
+    }
+    .logo{
+        display: block;
+        width: 90%;
+        padding-bottom: 0px;
+        text-align: center;
+    }
+    .menu{
+        display: block;
+        width: 100%;
+    }
+    .menu ul{
+        margin-block-start: 0px;
+        margin-block-end: 0px;
+        padding-inline-start: 0px;
+        text-align: center;
+        margin: auto;
+        padding: auto;
+    }
+    .cramer, .multiplicacao{
+        width: 98%;
+        padding: 5px;
+    }
+    .img, .texto{
+        display: block;
+        width: 100%;
+        padding: 0px;
+    }
+    .opcoes{
+        display: none;
+    }.opcoes2{
+        width: 95%;
+        height: auto;
+        background-color: rgb(58, 70, 76);
+        display: table;
+        text-align: center;
+        padding: 5px;
+        margin: auto;
+    }
+    .download2{
+        width: 50%;
+        height: 70px;
+        text-align: center;
+        display: table-cell;
+    }
+    .link2{
+        width: 50%;
+        height: 70px;
+        text-align: center;
+        display: table-cell;
+    }
+    .mobile{
+        height: 70px;
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        margin: auto;
+    }
+    .download{
+        display: none;
+    }
+    .link{
+        display: none;
+    }
+    .conteudo{
+        padding: 0px 10px 10px 10px;
+        margin-left: 0px;
+    }
+    .rodape{
+        background-color: rgb(18, 30, 36);
+        display: table;
+        text-align: center;
+    }
+    .logorodape, .sobre, .feitopor, .screen{
+        display: block;
+    }
+    .logorodape, .desktop{
+        display: none;
+    }
+    .menor{
+        width: 80%;
+    }
+    .feitopor{
+        margin: auto;
+        border-top: 2px solid;
+        border-left: none;
+        border-color: black;
+    }
+}
+
+@media only screen and (min-width:600px) and (max-width:768px){
+    .opcoes{
+        width: 100px;
+    }
+    .link, .download{
+        width: 65px;
+        padding-left: 15px;
+    }
+    .logorodape{
+        margin: 10px;
+        padding: 5px;
+        width: 50px;
+    }
+}
