@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Regra de Cramer - Matriciando</title>
+</head>
+<body>
+    <div class="top">
+        <div class="logo">
+            <a href="index.html">
+                <img src="../img/matriciando.png" alt="">
+            </a>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="cramer.html">Regra de Cramer</a></li>
+                <li><a href="multiplicacaomatricial.html">Multiplicação Matricial</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="opcoes">
+            <div class="download">
+                <a href="../download/cramer.por">
+                    <img src="../img/downloadpor.png" alt="">
+                    <span class="azul">Download</span>
+                </a>
+            </div>
+            <div class="link">
+                <a href="https://github.com/leonampertile/TSI/commit/35b6c1c8014b492739050c19e037512c4c48afcc">
+                    <img src="../img/linkpor.png" alt="">
+                    <span class="azul">Link do código</span>
+                </a>  
+            </div>
+        </div>
+        <div class="conteudo">
+            <h1 class="amarelo">Regra de Cramer</h1>
+                <div class="destaque">
+                    A regra de Cramer é uma das maneiras de resolver um sistema linear, mas só poderá ser 
+                    utilizada na resolução de sistemas que o número de equações e o número de incógnitas 
+                    forem iguais.
+                    Portanto, ao resolvermos um sistema linear de n equações e n incógnitas para a sua
+                    resolução devemos calcular o determinante (D) da equação incompleta do sistema e depois 
+                    substituirmos os termos independentes em cada coluna e calcular os seus respectivos 
+                    determinantes e assim aplicar a regra de Cramer que diz:
+                    <p>Os valores das incógnitas são calculados da seguinte forma:</p>
+                    <h3 class="azul">X1 = D1/D, X2 = D2/D, X3 = D3/D   ...   Xn = Dn/D</h3>
+                </div>
+            <h2>Veja no exemplo abaixo de como aplicar essa regra de Cramer:</h2>
+            <p>Suponha que você faça orçamentos de 3 tipos de carros para compor sua revendedora. Você faz orçamentos com quantidades diferentes. A concessionária iFcar não dá os valores unitários, pois isso promove a
+            concorrência. Assim, você faz três orçamentos:</p>
+            <p>Orçamento 1: 3 iF Machine S, 8 iF Machine L, 5 iF Machine SL, equivale a R$ 1.210.000,00</p>
+            <p>Orçamento 2: 2 iF Machine S, 10 iF Machine L, 3 iF Machine SL, equivale a R$ 1.100.000,00</p>
+            <p>Orçamento 3: 5 iF Machine S, 3 iF Machine L, 12 iF Machine SL, equivale a R$ 1.660.000,00</p>
+            <h2 class="amarelo">Quanto custa cada carro?</h2>
+            Notemos que é possível montar um sistema linear onde cada orçamento é uma equação linear e <span class="azul">x</span>, <span class="azul">y</span>, e <span class="azul">z</span>
+            representam os respectivos modelos S, L e SL do iF Machine. Assim:
+            <span class="sistema menor">
+                <img src="../img/sistema.png" alt="">
+            </span>
+            <h3 class="amarelo">Pela regra de Cramer:</h3>
+            <span class="sistema">
+                <img src="../img/regracramer.png" alt="">
+            </span>
+            <h3 class="amarelo">Primeiro calculamos as determinantes</h3>
+            <img src="../img/d.png" alt="">
+            <p class="negrito azul">D = (3 x 10 x 12) + (8 x 3 x 5) + (5 x 2 x 3) - (5 x 10 x 5) - (8 x 2 x 12) - (3 x 3 x 3) = 41</p>
+            <img src="../img/dx.png" alt="">
+            <p class="negrito azul">Dx = (1210000 x 10 x 12) + (8 x 3 x 1660000) + (5 x 1100000 x 3) - (5 x 10 x 1660000) - (8 x 1100000 x 12) - ( 3 x 3 x 1210000) = 2.050.000</p>
+            <img src="../img/dy.png" alt="">
+            <p class="negrito azul">Dy = (3 x 1100000 x 12) + (1210000 x 3 x 5) + (5 x 2 x 1660000) - (5 x 1100000 x 5) - (1210000 x 2 x 12) - (3 x 3 x 1660000) = 2.870.000</p>
+            <img src="../img/dz.png" alt="">
+            <p class="negrito azul">Dz = (3 x 10 x 1660000) + (8 x 1100000 x 5) + (2 x 3 x 1210000) - (1210000 x 10 x 5) - (8 x 2 x 1660000) - (3 x 1100000 x 3) = 4.100.00</p>
+            <P class="negrito">Então temos que:</p>
+            <p>D = 41  <br />Dx = 2.050.000   <br />Dy = 2.870.000   <br />Dz = 4.100.000</p>
+            <h3 class="amarelo">Por ultimo, dividimos as determinandes Dx, Dy, Dz pela determinante D</h3>
+            <p><span class="azul"> Dx/D = 2.050.000 / 41 = 50.000<br />Dy/D = 2.870.000 / 41 = 70.000<br />Dz/D = 4.100.000 / 41 = 100.000</p>
+            <h3>Como resultado temos: <span class="azul">x</span> = 50.000; <span class="azul">y</span> = 70.000; <span class="azul">z</span> = 100.000</h3>
+            <p class="amarelo"><span class="negrito">R:</span> O iF Machine S custa R$ 50.000,00, o iF Machine L custa R$ 70.000 e o iF Machine SL custa R$ 100.000,00.</p>
+            <br />
+
+            <h2 class="amarelo">Com o Portugol Studio</h2>
+            <p>Primeiro digitamos os valores de <span class="azul">a</span> e <span class="azul">b</span> como mostra a figura abaixo</p>
+            <img src="../img/cramerpor.png" alt="">
+            <p>Em seguida o console mostra o formato do sistema linear</p>
+            <img src="../img/cramerpor2.png" alt="">
+            <p>Logo após mostra os resultados das determinantes de D, Dx, Dy, Dz</p>
+            <img src="../img/cramerpor3.png" alt="">
+            <p>Por ultimo exibe o resultado do sistema linear</p>
+            <img src="../img/cramerpor4.png" alt="">
+
+            <h3 class="vermelho">O download do arquivo .por e o link do código fonte estão disponiveis<span class="desktop"> a esquerda</span><span class="screen"> abaixo</span></h3>
+
+            <div class="opcoes2">
+                <div class="download2">
+                    <a href="../download/cramer.rar">
+                        <img class="mobile" src="../img/downloadpor.png" alt="">
+                        <span class="azul">Download </span>
+                    </a>
+                </div>
+                <div class="link2">
+                    <a href="https://github.com/leonampertile/TSI/blob/master/Regra%20de%20Cramer">
+                        <img class="mobile" src="../img/linkpor.png" alt="">
+                        <span class="azul">Link do código</span>
+                    </a>
+                </div>
+            </div>    
+        </div>
+    </div>
+    <div class="rodape">
+        <div class="logorodape">
+                <img src="img/logorodape.png" alt="">
+        </div>
+        <div class="sobre">
+            <h3>Sobre</h3>
+            <p>Matriciando foi desenvolvido com o objetivo de auxiliar estudantes na resolução de multiplicação de matrizes e de sistemas lineares pela regra de Cramer com o auxilio do portugol Studio.</p>
+        </div>
+        <div class="feitopor">
+            <div class="eu">
+                <img src="img/eu.png" alt="">
+            </div>
+            <div class="desen">
+                <p>Desenvolvido por Leonam Pertile</p>
+                <p>Estudante TSI - IFMS</p>
+                <p>2019</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
