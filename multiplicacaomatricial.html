@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title> Multiplicação matricial - Matriciando</title>
+</head>
+<body>
+    <div class="top">
+        <div class="logo">
+            <a href="index.html">
+                <img src="../img/matriciando.png" alt="">
+            </a>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="cramer.html">Regra de Cramer</a></li>
+                <li><a href="multiplicacaomatricial.html">Multiplicação Matricial</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="opcoes">
+            <div class="download">
+                <a href="../download/multiplicacao.por">
+                    <img src="../img/downloadpor.png" alt="">
+                    <span class="azul">Download </span>
+                </a>
+            </div>
+            <div class="link">
+                <a href="https://github.com/leonampertile/TSI/blob/master/Multiplica%C3%A7%C3%A3o%20matricial">
+                    <img src="../img/linkpor.png" alt="">
+                    <span class="azul">Link do código</span>
+                </a>
+            </div>
+        </div>
+        <div class="conteudo">
+            <h1 class="amarelo">Multiplicação de Matrizes</h1>
+            <div class="destaque">
+                <h3>Definição da multiplicação de matrizes</h3>
+                <p>Sejam as matrizes <span class="azul">A</span> e <span class="azul">B</span>, o produto entre <span class="azul">A</span> e <span class="azul">B</span>, escrevemos <span class="azul">A x B</span> ou <span class="azul">A . B</span>, só é possível se o número de colunas da matriz <span class="azul">A</span> for igual ao número de linhas da matriz <span class="azul">B</span>. Então:</p>
+                <img src="../img/col=lin.png" alt="">
+                <p>Com isso, o produto entre <span class="azul">A</span> e <span class="azul">B</span> , produz como resultado uma matriz <span class="azul">C</span>, em que <span class="azul">C</span> é obtida pela multiplicação dos elementos das linhas de <span class="azul">A</span> pelos elementos das colunas de <span class="azul">B</span>. Então:</p>
+                <img src="../img/resultante.png" alt="">
+            </div>
+            <h3 class="amarelo">Considere as matrizes <span class="azul">A</span> de ordem 2×2 e <span class="azul">B</span> de ordem 2×3 a seguir;</h3>
+            <img src="../img/naoquadrada.png" alt="">
+            <h3 class="amarelo">Agora vamos fazer o passo a passo da multiplicação entre essas duas matrizes:</h3>
+            <p>1º - Multiplicamos primeiro a <span class="vermelho">1ª</span> linha de <span class="azul">A</span> e a <span class="vermelho">1ª</span> coluna de <span class="azul">B</span>:</p>
+            <img src="../img/naoquadrada2.png" alt="">
+            <p>2º - Multiplicamos a <span class="vermelho">1ª</span> linha de <span class="azul">A</span> e a <span class="vermelho">2ª</span> coluna de <span class="azul">B</span>:</p>
+            <img src="../img/naoquadrada3.png" alt="">
+            <p>3º - Multiplicamos a <span class="vermelho">1ª</span> linha de <span class="azul">A</span> e a <span class="vermelho">3ª</span> coluna de <span class="azul">B</span>:</p>
+            <img src="../img/naoquadrada4.png" alt="">
+            <p>4º - Multiplicamos a <span class="vermelho">2ª</span> linha de <span class="azul">A</span> e a <span class="vermelho">1ª</span> coluna de <span class="azul">B</span>:</p>
+            <img src="../img/naoquadrada5.png" alt="">
+            <p>5º - Multiplicamos a <span class="vermelho">2ª</span> linha de <span class="azul">A</span> e a <span class="vermelho">2ª</span> coluna de <span class="azul">B</span>:</p>
+            <img src="../img/naoquadrada6.png" alt="">
+            <p>6º - Por fim multiplicamos a <span class="vermelho">2ª</span> linha de <span class="azul">A</span> e a <span class="vermelho">3ª</span> coluna de <span class="azul">B</span>:</p>
+            <img src="../img/naoquadrada7.png" alt="">
+            <h2 class="amarelo">Então temos que:</h2>
+            <img src="../img/naoquadrada8.png" alt="">
+            <p>Então, a multiplicação entre essas duas matrizes só é possível porque o número de linhas de A é igual ao número de colunas em B, como mostra a definição.</p>
+            <br/>
+
+            <h2 class="amarelo">Com o Portugol Studio</h2>
+            <p>Primeiro digitamos os valores das matrizes como mostra a figura abaixo</p>
+            <img src="../img/naoquadradapor.png" alt="">
+            <p>Em seguida o console mostra como é feita a multiplicação</p>
+            <img src="../img/naoquadradapor2.png" alt="">
+            <p>Por fim, o resultado</p>
+            <img src="../img/naoquadradapor3.png" alt="">
+
+            <h3 class="vermelho">O download do arquivo .por e o link do código fonte estão disponiveis<span class="desktop"> a esquerda</span><span class="screen"> abaixo</span></h3>
+
+            <div class="opcoes2">
+                <div class="download2">
+                    <a href="../download/multiplicacao.rar">
+                        <img class="mobile" src="../img/downloadpor.png" alt="">
+                        <span class="azul">Download </span>
+                    </a>
+                </div>
+                <div class="link2">
+                    <a href="https://github.com/leonampertile/TSI/blob/master/Multiplica%C3%A7%C3%A3o%20matricial">
+                        <img class="mobile" src="../img/linkpor.png" alt="">
+                        <span class="azul">Link do código</span>
+                    </a>
+                </div>
+            </div>     
+        </div>
+    </div>
+    <div class="rodape">
+        <div class="logorodape">
+                <img src="img/logorodape.png" alt="">
+        </div>
+        <div class="sobre">
+            <h3>Sobre</h3>
+            <p>Matriciando foi desenvolvido com o objetivo de auxiliar estudantes na resolução de multiplicação de matrizes e de sistemas lineares pela regra de Cramer com o auxilio do portugol Studio.</p>
+        </div>
+        <div class="feitopor">
+            <div class="eu">
+                <img src="img/eu.png" alt="">
+            </div>
+            <div class="desen">
+                <p>Desenvolvido por Leonam Pertile</p>
+                <p>Estudante TSI - IFMS</p>
+                <p>2019</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
